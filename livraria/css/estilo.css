@@ -1,0 +1,38 @@
+h1{ /* definindo stilo titulo/paragrafo todas as paginas */
+    font-size: 40px;
+    color: #999 !important; /* para subscrever o estilo definido no index */
+}
+p{
+    color:red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.4em;
+    
+}
+footer p{        /* definindo o stilo para direitos autorais todas as paginas  */
+    color: brown;
+    font-weight: bold;
+    font-size: 15px;
+}
+/* selecionar: primeiro artigo segundo paragrafo*/
+section article:nth-of-type(1) p:nth-of-type(2){
+    text-transform: capitalize;
+    color:#999;
+
+}
+/* selecionar: primeiro artigo /ul nao ordenada /ultimo item da lista(li)*/
+section article:nth-of-type(1) ul li:last-child{
+    color: brown;
+    font-weight: bold;
+}
+/* selecionar: segundo artigo /tabela/ segunda linha/ultima coluna */
+section article:nth-of-type(2) table tr:nth-of-type(2) td:last-child{
+    background-color: #000;
+    color: #fff;
+}
+
+/* class / regra para um atributo*/
+.estilo1{
+    background-color: #999;
+    color: #000;
+    text-align: center;
+}

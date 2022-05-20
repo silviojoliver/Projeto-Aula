@@ -7,7 +7,7 @@ console.log(document.querySelector("h1"))
 //querySelector ('tag')
 //querySelector ('#id')
 //innerHTML(html interno)
-document.querySelector("h1").innerHTML += " >>" // adiciona ao texto (>>)
+document.querySelector("h1").innerHTML+=">>"
 
 //Acesso a um elemento de formulário
 console.log(document.forms.formContato)

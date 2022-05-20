@@ -21,6 +21,29 @@ p1.innerHTML="Turma: " + videosJSON.turma
 p2.innerHTML=videosJSON.ano
 
 
+//JSON exemplos 2
+let usuario='{"nome":"Adalberto","idade":34,"livros":["Bill Gates","Terror em Lake City","O Elefante Branco","Capitães de Areia"]}'
+let usuarioJSON=JSON.parse(usuario)
+console.log(usuarioJSON)
+let infoNome=document.querySelector("#infoNome")
+infoNome.innerHTML=usuarioJSON.nome + " , " + usuarioJSON.idade + " anos"
+
+let livros=document.querySelector("#listaLivros")
+listaLivros.innerHTML='<li>' +usuarioJSON.livros[1] + '</li>' 
+listaLivros.innerHTML+='<li>' +usuarioJSON.livros[2] + '</li>' 
+listaLivros.innerHTML+='<li>' +usuarioJSON.livros[0] + '</li>' 
+
+
+let livrosdFor=document.querySelector("#livrosFor")
+for(var i=0;i<usuarioJSON.livros.length;i++){
+    console.log(usuarioJSON.livros[i])
+    livrosdFor.innerHTML+= (i+1) + ': ' +usuarioJSON.livros[i]  + '<br />'
+
+}
+
+
+
+
 
 
 

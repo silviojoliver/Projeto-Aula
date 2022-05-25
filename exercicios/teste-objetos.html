@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--cabeça-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Livraria</title>
+</head>
+
+<body>
+    <!--corpo-->
+    <section>
+        <h1>Trabalhando com objetos</h1>
+    </section>
+</body>
+<script>
+    //criando um objeto
+    let carro = {
+        portas: 4,
+        cor: "branco",
+        modelo: "basic",
+        tetoSolar: false,
+    };
+
+    if (carro.tetoSolar == false) {
+        console.log("O modelo " + carro.modelo + " não tem teto solar");
+    }
+    console.log(carro.portas); //4
+    console.log(carro.cor); //branco
+    console.log(carro.modelo); //basic
+    console.log(carro.tetoSolar); //false
+
+    let carro2 = {
+        portas: 4,
+        cores: ["branco", "preto", "prata"],
+        modelo: "plus",
+        tetoSolar: true,
+    };
+    if (carro2.tetoSolar == false) {
+        console.log("O modelo " + carro2.modelo + " não tem teto solar");
+    } else {
+        console.log("O modelo " + carro2.modelo + " tem teto solar");
+    }
+    console.log(
+        "O modelo " + carro2.modelo + " ,temos nas cores " + carro2.cores
+    );
+
+    let pessoa = {
+        nome: "Silvio Oliver",
+        idade: 51,
+        preferMusica: "Samba",
+        certificados: {
+            nome: "Node Js",
+            ano: 2022
+        },
+        falar: function (pais, profissao, estiloMusica) {
+            this.preferMusica = estiloMusica;
+            //this menciona o objeto principal(pessoa)
+            console.log(
+                "Olá, meu nome é: " +
+                this.nome +
+                " tenho " +
+                this.idade +
+                " anos." +
+                " Trabalho no " +
+                pais +
+                " como " +
+                profissao +
+                "Eu gosto de ouvir " +
+                this.preferMusica)
+        }
+    }
+
+    //let nomePessoa = pessoa.nome/ outra forma
+    let nomePessoa = pessoa["nome"]
+    console.log(pessoa.certificados.nome, pessoa.certificados.ano)
+
+    console.log(nomePessoa.length) //13
+    console.log(pessoa.preferMusica)
+
+
+
+    //guardando a informação dentro de uma constante
+    const estiloMusica = pessoa.preferMusica;
+    pessoa.falar("Mexico", "Professor", estiloMusica);
+
+    pessoa.falar("Mexico", "Professor", pessoa.preferMusica);
+    pessoa.falar("Mexico", "Professor", "Lambada");
+    pessoa.falar("Havai", "Salva Vidas", "Forro");
+
+    //mudar pessoa e idade
+    pessoa.nome = "Gloria";
+    pessoa.idade = 45;
+    pessoa.falar("Havai", "Salva Vidas", "Sertanejo");
+    pessoa.falar("Havai", "Salva Vidas", estiloMusica);
+</script>
+
+</html>
